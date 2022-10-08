@@ -1,0 +1,31 @@
+/*------------ESTILOS MENU PRINCIPAL--------------*/
+
+@mixin menu-principal($fuente-menu, $color-fuente-menu){
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem 1rem 1rem;
+    
+    &__item{
+        padding: 1rem;
+        font-family: map-get($fonts, $fuente-menu);
+        padding-right:1rem;
+        font-size: 1.5rem;
+        transition: all .25s;
+        &:hover{
+            scale: 1.5;
+            transition: all .25s;            
+        }
+        
+    }
+    &__link{
+        color: map-get($fonts-colors, $color-fuente-menu);
+        transition: all .25s;
+        &:hover{
+            color: map-get($bg-colors,bg-color-logo);
+            transition: all .25s;
+        }
+    }
+}
+

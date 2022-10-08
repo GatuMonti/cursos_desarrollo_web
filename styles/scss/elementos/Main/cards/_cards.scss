@@ -1,0 +1,63 @@
+/*-----------ESTILOS DE LAS CARDS--------------*/
+
+.card {
+    //----Cards
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0rem 2rem;
+    width: 13.125rem;
+    height: 20rem;
+    background-color: map-get($bg-colors, bg-color-cards);
+    border: 1px solid #bfced8;
+    box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    overflow: hidden;
+    &:hover{
+        background-color: black;
+        transition: background-color .75s;
+        .card__icono{
+            color: map-get($fonts-colors, font-color-cards);     
+            position:relative;
+            top: -5rem;      
+            scale: 1.5;
+            transform: translateY(3.5rem);            
+            transition: color 1s, transform .5s;
+        }
+        .card__title{
+            color: white;
+            position: relative;
+            top: -5rem;
+            transform: translateY(5rem);          
+            transition: color 1s, transform .25s;
+        }
+        .card__descripcion{
+            color: white;      
+            position: relative;
+            left: -10rem;
+            transform: translateX(10rem);
+            transition: color 1s, transform .5s;
+        }
+    }
+
+    &__icono {
+        //---Imagen en el titulo de las cads
+        font-family: map-get($fonts, font-simbolos);
+        font-size: 2.75rem;
+        padding: 1rem 0rem 3rem;        
+    }
+
+    &__title {
+        //-----Titulo de las cads
+        color: map-get($fonts-colors, font-color-cards);
+    }
+
+    &__descripcion {
+        //-----Descripcion de las cards
+        color: map-get($fonts-colors, font-color-cards);
+        text-align: center;
+        font-weight: 100;
+        padding: 2rem 0rem 3rem;
+    }
+}

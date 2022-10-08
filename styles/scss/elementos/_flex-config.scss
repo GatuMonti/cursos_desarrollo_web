@@ -1,0 +1,24 @@
+/*-------FLEX CENTER---------*/
+@mixin flex-center ($direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex ($direction, $justifi-content){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifi-content;
+    align-items: center;
+}
+
+/*---------FLEX DIRECCTION------*/
+$fila: row;
+$columna: column;
+$space-around: space-around;
+$space-between: space-between;
+$space-evenly: space-evenly;
+$flex-start: flex-start;
+$flex-end: flex-end;
+$center: center;

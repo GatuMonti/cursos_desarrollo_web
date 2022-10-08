@@ -1,0 +1,300 @@
+/*----IMPORTACIONES----------------
+------------------------------------*/
+
+@import "elementos/general-styles.scss"; //Estilos Generales
+@import "elementos/flex-config"; //Configurar FLEX
+@import "elementos/colores"; //Colores
+@import "elementos/fuentes"; //Fuentes
+@import "elementos/Header/logo/logo"; //Logo del Header
+@import "elementos/Header/logo/logo-animaciones"; //Animaciones del Logo
+@import "elementos/Header/menu_header/menu-principal"; //Menu Principal del header
+@import "elementos/banner"; //Banner
+@import "elementos/Main/cards/cards"; //Cards
+@import "elementos/articulos"; //Articulos
+@import "elementos/formularios"; //Formularios
+
+
+
+/*--------------ESTILOS UNIVERSALES------------*/
+* {
+    @extend .universal;
+}
+
+
+/*------------ESTILOS DEL BODY------------*/
+
+.body {
+    @include body(font-principal);
+    h2{
+        @include titulos(bg-color-titulos);
+    }
+}
+
+/*------------ESTILOS DEL HEADER----------*/
+.header {
+    //----Header
+    @include header(bg-color-secundario, font-color-principal);
+    @include flex-center ($fila);
+    align-items: center;
+
+    &__contenedor {
+        //---Contenedor dentro del Header
+        margin: 0 auto;
+        width: 75rem;
+        @include flex ($fila, $space-between);
+    }
+
+    .logo {
+        //----LOGO
+        @include logo(bg-color-logo, font-secundaria, font-simbolos);
+    }
+
+    .menu-principal {
+        //----Menu Principal del Header
+        @include menu-principal(font-secundaria, font-color-principal);
+    }
+}
+
+
+/*------------ESTILOS DEL MAIN----------*/
+
+.main {
+    @extend .main; //----Contenedor Principal
+
+    .contenedor-principal {
+        width: 75rem;
+        margin: 0 auto;
+        @include flex-center ($columna);
+    }
+
+    .banner {
+        //----Baner
+        @extend .banner;
+    }
+
+    .contenedor-cards {
+        //---Contenedor de todas las cards
+        @include flex ($fila, $space-between);
+        width: 75rem;
+        height: auto;
+        padding: 4.375rem .5rem 7.8125rem;
+        .card {
+            //-----Cards Individuales
+            @extend .card;
+        }
+    }
+
+    .contenedor-inferior {
+        //----Contenedor de Articulos y Barra lateral
+        @include flex ($fila, $space-between);
+        align-items: flex-start;
+        
+        .contenedor-articulos {
+            //--Contenedor de Articulos
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70%;
+            height: auto;
+            &__title {
+                //---Titulo del Contenedor de articulos
+                font-family: map-get($fonts, font-secundaria);
+                letter-spacing: 1px;
+                font-size: 3rem;
+                font-weight: 300;
+                background: url(../../img/pxgray.png);
+                background-color: map-get($bg-colors, bg-color-titulos);
+                box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.83);
+                width: 100%;
+                text-align: center;
+                padding: .75rem;
+            }
+            .articulo {
+                //----Articulos Individuales
+                @extend .articulo;
+            }
+        }
+
+        .asside-bar {
+            //---Contenedor de barra Lateral
+            width: 25%;            
+            
+            .contenedor-inputs {
+                //---Contenedor de los Inputs
+                padding: 2rem 0rem 3rem;
+                
+            }
+
+            .form-search {
+                //---Formulario Buscar
+                &__input {
+                    width: 89%;
+                    @extend .input;
+                }
+
+                &__button {
+                    border-radius: 0px 5px 5px 0px;
+                    margin-left: -.37rem;
+                    @extend .input;
+                }
+            }
+
+            .login{//----LOGIN Estilos de los Inputs
+                @extend .input;
+                margin-bottom: 1rem;
+            }
+
+            .form-login {//---LOGIN
+                .contenedor-inputs__login{
+                    border: 2px solid #bfced8;
+                    border-radius: 5px;
+                    box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
+                    background-color: map-get($bg-colors, bg-color-cards);
+                    margin: 1rem 0rem 2rem;
+                    padding: 1rem .5rem 4rem;
+                }
+                &__input {
+                    width: 90%;
+                }
+                &__contenedor-botones{
+                    display: flex;
+                    justify-content: space-around;
+                }
+                &__boton{                    
+                    background-image: linear-gradient(to bottom,#37bcf9,#00538c);
+                    padding: .75rem 2rem;
+                    color: map-get($fonts-colors,font-color-principal);
+                    font-size: 1.25rem;
+                }
+            }
+            .redes-sociales{//---Redes Sociales
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                & h2{
+                    width: 100%;
+                }
+                &__iconos{
+                    display: flex;
+                    flex-direction: column;                
+                    width: 70%;
+                    height: 17rem;
+                    font-size: 2rem;
+                    border: 2px solid #bfced8;
+                    border-radius: 5px;
+                    box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
+                    background-color: map-get($bg-colors, bg-color-cards);
+                    margin: 1rem 2rem 1rem;
+                }
+                
+                &__items{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            
+            .colaboradores{//---Contenedor de los Colaboradores
+                &__contenedor{
+                    border-radius: 5px;
+                    box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
+                    background-color: map-get($bg-colors, bg-color-cards);
+                    padding: 10rem 5rem;
+                    border: 2px solid #bfced8;
+                    margin: 1rem 1.5rem;
+                }
+            }
+        }
+    }    
+}
+
+
+/*------------ESTILOS DEL FOOTER----------*/
+.footer{
+    width: 100%; 
+    background-color: map-get($bg-colors,bg-color-secundario);  
+    text-align: center; 
+
+    & h2{//---Estilos de los titulos del Footer
+        border-radius: .5rem;
+    }
+
+    &__contenedor{ //---Contenedor General del Footer
+        @include flex ($fila, $space-between);
+        align-items: flex-start;
+        margin: 0 auto;
+        padding: 2rem;
+        width: 75rem; 
+        
+        &--ancho{
+            width: 30%;
+        }
+        
+        .menu-footer{//-----Menu del Footer
+            margin-left:1rem;
+            &__item{
+                border-bottom: 1px solid gray;
+                padding: 2rem 0 1rem;
+                color: aliceblue;
+                width: 80%;
+            }
+            &__link{
+                color: aliceblue;
+                font-size: 1.25rem;               
+            }
+        }
+
+
+        .ubicacion{//------Seccion de Ubicacion
+            &__maps{
+                width: 100%;
+                height: 20rem;
+                margin-top: 1rem;
+                border-radius: 10px;
+            }
+        }
+
+        .footer-contenedor-derecho{
+            @include flex-center ($columna);
+            
+            .footer-contenedor-html5{
+                @include flex-center ($columna);
+                width: 100%;
+                &__title{
+                    width: 100%;
+                }                
+                &__img{
+                    padding: 1rem;
+                }
+            }
+
+            .footer-contenedor-sistemas{
+                @include flex-center ($fila);
+                flex-wrap: wrap;
+                &__title{
+                    width: 100%;
+                }
+                &__img{
+                    width: 3rem;
+                    margin: 2rem .25rem;
+                }
+            }
+
+            .footer-autor{
+                width: 100%;
+                &__descripcion{
+                    color: white;
+                    padding: 1rem;
+                }
+            }
+
+
+        }
+    }
+}
+
+
+
+
+

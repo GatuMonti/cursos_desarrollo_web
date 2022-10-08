@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "trebuchetMS";
+    src: url(../../fonts/TrebuchetMS.ttf);
+    font-weight: 100, 200, 300, 400, 500, 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BebasMeue";
+    src: url(../../fonts/BebasNeue.otf);
+    font-weight: 300, 400, 500, 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "WebSymbolsRegular";
+    src: url(../../fonts/websymbols-regular-webfont.eot);
+    src: url(../../fonts/websymbols-regular-webfont.eot?#iefix) format('embedded-opentype'),
+        url(../../fonts/websymbols-regular-webfont.woff) format('woff'),
+        url(../../fonts/websymbols-regular-webfont.ttf) format('truetype'),
+        url(../../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*----------FUENTES-------------*/
+$fonts: (
+    "font-simbolos": "WebSymbolsRegular",
+    "font-principal": "trebuchetMS",
+    "font-secundaria": "BebasMeue",
+);

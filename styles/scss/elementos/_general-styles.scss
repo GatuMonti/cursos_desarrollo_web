@@ -1,0 +1,42 @@
+/*--------------ESTILOS UNIVERSALES------------*/
+.universal{
+    box-sizing: border-box;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+/*------------ESTILOS DEL BODY------------*/
+
+@mixin body ($nombre-fuente){
+    background: url(../../../img/pattern.png);
+    font-family: map-get($fonts, $nombre-fuente);
+    font-weight: 300;
+    font-style: normal;
+}
+
+/*------------ESTILOS DEL HEADER------------*/
+@mixin header($bg-color, $font-color){
+    width: 100vw;
+    height: 4.375rem;
+    background-color: map-get($bg-colors,$bg-color);
+    color: map-get($fonts-colors, $font-color)
+}
+
+/*-----------ESTILOS DEL MAIN--------------*/
+.main{
+    width: 100%;
+    height: auto;
+}
+
+@mixin titulos($bg-color-titulos){
+    background: url(../../img/pxgray.png);
+    background-color: map-get($bg-colors, $bg-color-titulos);
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.83);
+    padding: .5rem 1rem;
+    font-family: map-get($fonts, font-secundaria);
+    letter-spacing: 2px;
+    font-size: 2rem;
+    font-weight: 300;
+}

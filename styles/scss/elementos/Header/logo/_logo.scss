@@ -1,0 +1,36 @@
+/*-----ESTILOS DEL LOGO------*/
+
+@mixin logo($bg-color-logo, $fuente, $fuente-simbolo){
+    background-color: map-get($bg-colors, $bg-color-logo);
+    font-size: 1.875rem;
+    font-family: map-get($fonts, $fuente);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 3rem 0rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 4s, color 3s;
+    &:hover{
+        background-color: lightgray;
+        color: black;
+        transition: background-color .5s;
+        .logo__title{
+            transform: translateX(10rem);
+            transition: transform 1s;
+        }    
+        
+    }
+    &__gear{
+        transform-origin: center;
+        animation: rotacion 2s linear infinite;
+        height: 30px;       
+        
+        }
+    &__title{
+        padding-left: 1rem;
+        transition: transform 1s;         
+    }    
+}
+
