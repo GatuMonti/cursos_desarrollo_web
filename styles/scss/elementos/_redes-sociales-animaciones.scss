@@ -24,7 +24,9 @@
             cursor: pointer; 
             padding-right: 1rem;
             z-index: 1;
-            
+            &:hover{
+                animation: pop-up .5s;                
+                }            
             }
         
         &__nombre{
@@ -37,16 +39,16 @@
         }
         &__items{
             width: 2.5rem;
-            margin: .5rem;
+            padding: .75rem .25rem;
             display: flex;
             justify-content: space-between;             
             overflow: hidden;                     
             &:hover{
                 width: 90%;                        
                 .redes-sociales__nombre{
-                    transform: translateX(8.5rem);
+                    transform: translateX(9.75rem);
                     color: black;
-                    transition: transform 1s, color 3s;
+                    transition: transform .5s, color 3s;
                 }
             }
         }         

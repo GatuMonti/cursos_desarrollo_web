@@ -267,6 +267,10 @@
   padding-right: 1rem;
   z-index: 1;
 }
+.redes-sociales__icono:hover {
+  -webkit-animation: pop-up 0.5s;
+          animation: pop-up 0.5s;
+}
 .redes-sociales__nombre {
   font-size: 1.5rem;
   font-weight: 700;
@@ -276,7 +280,7 @@
 }
 .redes-sociales__items {
   width: 2.5rem;
-  margin: 0.5rem;
+  padding: 0.75rem 0.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -289,15 +293,52 @@
   width: 90%;
 }
 .redes-sociales__items:hover .redes-sociales__nombre {
-  -webkit-transform: translateX(8.5rem);
-          transform: translateX(8.5rem);
+  -webkit-transform: translateX(9.75rem);
+          transform: translateX(9.75rem);
   color: black;
-  -webkit-transition: color 3s, -webkit-transform 1s;
-  transition: color 3s, -webkit-transform 1s;
-  transition: transform 1s, color 3s;
-  transition: transform 1s, color 3s, -webkit-transform 1s;
+  -webkit-transition: color 3s, -webkit-transform 0.5s;
+  transition: color 3s, -webkit-transform 0.5s;
+  transition: transform 0.5s, color 3s;
+  transition: transform 0.5s, color 3s, -webkit-transform 0.5s;
 }
 
+.articulo-blog, .main .contenedor-inferior .contenedor-articulos .articulo-blog {
+  cursor: pointer;
+}
+.articulo-blog:hover, .main .contenedor-inferior .contenedor-articulos .articulo-blog:hover {
+  background-color: gray;
+  border-radius: 9.375rem;
+  border: 0.5rem solid rgb(145, 216, 40);
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+  -webkit-transition: background-color 0.5s, border-radius 0.5s, border 0.5s;
+  transition: background-color 0.5s, border-radius 0.5s, border 0.5s;
+}
+.articulo-blog:hover .articulo-blog__title, .main .contenedor-inferior .contenedor-articulos .articulo-blog:hover .articulo-blog__title {
+  color: white;
+  line-height: 6.5rem;
+}
+
+@-webkit-keyframes pop-up {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+}
+
+@keyframes pop-up {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+}
 /*--------------ESTILOS UNIVERSALES------------*/
 /*------------ESTILOS DEL BODY------------*/
 .body {

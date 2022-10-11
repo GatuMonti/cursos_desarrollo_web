@@ -12,7 +12,9 @@
 @import "elementos/Main/cards/cards"; //Cards
 @import "elementos/articulos"; //Articulos
 @import "elementos/formularios"; //Formularios
-@import "elementos/redes-sociales-animaciones";
+@import "elementos/redes-sociales-animaciones"; //Iconos de Redes Sociales
+@import "elementos/Main/articulo-banner"; //Link BLOG
+@import "elementos/animaciones/animaciones"; //Animaciones
 
 
 
@@ -113,6 +115,9 @@
             .articulo {
                 //----Articulos Individuales
                 @extend .articulo;
+            }
+            .articulo-blog{
+                @extend .articulo-blog;
             }
         }
 
