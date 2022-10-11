@@ -1,0 +1,8 @@
+.contenedor-colaboradores{
+    border-radius: 5px;
+    box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
+    background-color: map-get($bg-colors, bg-color-cards);
+    padding: 10rem 5rem;
+    border: 2px solid #bfced8;
+    margin: 1rem 1.5rem;
+}

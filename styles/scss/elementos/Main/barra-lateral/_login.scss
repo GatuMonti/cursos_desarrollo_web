@@ -1,0 +1,22 @@
+.contenedor-inputs__login{
+    border: 2px solid #bfced8;
+    border-radius: 5px;
+    box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
+    background-color: map-get($bg-colors, bg-color-cards);
+    margin: 1rem 0rem 2rem;
+    padding: 1rem .5rem 4rem;
+
+&__input {
+    width: 90%;
+}
+&__contenedor-botones{
+    display: flex;
+    justify-content: space-around;
+}
+&__boton{                    
+    background-image: linear-gradient(to bottom,#37bcf9,#00538c);
+    padding: .75rem 2rem;
+    color: map-get($fonts-colors,font-color-principal);
+    font-size: 1.25rem;
+}
+}

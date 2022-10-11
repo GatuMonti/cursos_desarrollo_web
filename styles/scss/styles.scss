@@ -1,20 +1,26 @@
 /*----IMPORTACIONES----------------
 ------------------------------------*/
 
-@import "elementos/general-styles.scss"; //Estilos Generales
-@import "elementos/flex-config"; //Configurar FLEX
-@import "elementos/colores"; //Colores
-@import "elementos/fuentes"; //Fuentes
+@import "elementos/general/general-styles"; //Estilos Generales
+@import "elementos/general/flex-config"; //Configurar FLEX
+@import "elementos/general/colores"; //Colores
+@import "elementos/general/fuentes"; //Fuentes
 @import "elementos/Header/logo/logo"; //Logo del Header
 @import "elementos/Header/logo/logo-animaciones"; //Animaciones del Logo
 @import "elementos/Header/menu_header/menu-principal"; //Menu Principal del header
-@import "elementos/banner"; //Banner
+@import "elementos/Main/banner"; //Banner
 @import "elementos/Main/cards/cards"; //Cards
-@import "elementos/articulos"; //Articulos
-@import "elementos/formularios"; //Formularios
-@import "elementos/redes-sociales-animaciones"; //Iconos de Redes Sociales
-@import "elementos/Main/articulo-banner"; //Link BLOG
-@import "elementos/animaciones/animaciones"; //Animaciones
+@import "elementos/Main/articulos/articulos"; //Articulos
+@import "elementos/Main/barra-lateral/formularios"; //Formularios
+@import "elementos/Main/barra-lateral/redes-sociales-animaciones"; //Iconos de Redes Sociales
+@import "elementos/Main/articulos/articulo-blog"; //Link BLOG
+@import "elementos/general/animaciones"; //Animaciones
+@import "elementos/Main/barra-lateral/login"; //Login
+@import "elementos/Main/barra-lateral/colaboradores"; //Colaboradores
+@import "elementos/footer/menu-footer";//Menu footer
+@import "elementos/footer/ubicacion-footer"; //Mapa de la ubicacion
+
+
 
 
 
@@ -22,7 +28,6 @@
 * {
     @extend .universal;
 }
-
 
 /*------------ESTILOS DEL BODY------------*/
 
@@ -94,23 +99,10 @@
         
         .contenedor-articulos {
             //--Contenedor de Articulos
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 70%;
-            height: auto;
+            @extend .contenedor-articulos;
             &__title {
                 //---Titulo del Contenedor de articulos
-                font-family: map-get($fonts, font-secundaria);
-                letter-spacing: 1px;
-                font-size: 3rem;
-                font-weight: 300;
-                background: url(../../img/pxgray.png);
-                background-color: map-get($bg-colors, bg-color-titulos);
-                box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.83);
-                width: 100%;
-                text-align: center;
-                padding: .75rem;
+                @extend .contenedor-articulos__title;
             }
             .articulo {
                 //----Articulos Individuales
@@ -128,7 +120,6 @@
             .contenedor-inputs {
                 //---Contenedor de los Inputs
                 padding: 2rem 0rem 3rem;
-                
             }
 
             .form-search {
@@ -152,25 +143,7 @@
 
             .form-login {//---LOGIN
                 .contenedor-inputs__login{
-                    border: 2px solid #bfced8;
-                    border-radius: 5px;
-                    box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
-                    background-color: map-get($bg-colors, bg-color-cards);
-                    margin: 1rem 0rem 2rem;
-                    padding: 1rem .5rem 4rem;
-                }
-                &__input {
-                    width: 90%;
-                }
-                &__contenedor-botones{
-                    display: flex;
-                    justify-content: space-around;
-                }
-                &__boton{                    
-                    background-image: linear-gradient(to bottom,#37bcf9,#00538c);
-                    padding: .75rem 2rem;
-                    color: map-get($fonts-colors,font-color-principal);
-                    font-size: 1.25rem;
+                    @extend .contenedor-inputs__login;
                 }
             }
             .redes-sociales{
@@ -179,12 +152,7 @@
             
             .colaboradores{//---Contenedor de los Colaboradores
                 &__contenedor{
-                    border-radius: 5px;
-                    box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
-                    background-color: map-get($bg-colors, bg-color-cards);
-                    padding: 10rem 5rem;
-                    border: 2px solid #bfced8;
-                    margin: 1rem 1.5rem;
+                    @extend .contenedor-colaboradores;
                 }
             }
         }
@@ -194,9 +162,7 @@
 
 /*------------ESTILOS DEL FOOTER----------*/
 .footer{
-    width: 100%; 
-    background-color: map-get($bg-colors,bg-color-secundario);  
-    text-align: center; 
+    @include footer(bg-color-secundario);
 
     & h2{//---Estilos de los titulos del Footer
         border-radius: .5rem;
@@ -214,27 +180,12 @@
         }
         
         .menu-footer{//-----Menu del Footer
-            margin-left:1rem;
-            &__item{
-                border-bottom: 1px solid gray;
-                padding: 2rem 0 1rem;
-                color: aliceblue;
-                width: 80%;
-            }
-            &__link{
-                color: aliceblue;
-                font-size: 1.25rem;               
-            }
+            @extend .menu-footer;
         }
 
 
         .ubicacion{//------Seccion de Ubicacion
-            &__maps{
-                width: 100%;
-                height: 20rem;
-                margin-top: 1rem;
-                border-radius: 10px;
-            }
+            @extend .ubicacion;
         }
 
         .footer-contenedor-derecho{
@@ -270,8 +221,6 @@
                     padding: 1rem;
                 }
             }
-
-
         }
     }
 }

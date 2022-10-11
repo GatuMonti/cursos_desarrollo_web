@@ -1,3 +1,24 @@
+.contenedor-articulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: auto;
+}
+
+.contenedor-articulos__title{
+    font-family: map-get($fonts, font-secundaria);
+    letter-spacing: 1px;
+    font-size: 3rem;
+    font-weight: 300;
+    background: url(../../img/pxgray.png);
+    background-color: map-get($bg-colors, bg-color-titulos);
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.83);
+    width: 100%;
+    text-align: center;
+    padding: .75rem;
+}
+
 .articulo{
     display: flex;
     justify-content: space-between;
@@ -39,4 +60,6 @@
         font-family: map-get($fonts, font-secundaria);
     }
 }
+
+
 

@@ -40,3 +40,10 @@
     font-size: 2rem;
     font-weight: 300;
 }
+
+/*-----------ESTILOS DEL MAIN--------------*/
+@mixin footer($bg-color-secundario){
+    width: 100%; 
+    background-color: map-get($bg-colors,$bg-color-secundario);  
+    text-align: center; 
+}

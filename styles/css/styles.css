@@ -18,6 +18,7 @@
   height: auto;
 }
 
+/*-----------ESTILOS DEL MAIN--------------*/
 /*-------FLEX CENTER---------*/
 /*---------FLEX DIRECCTION------*/
 /*--------------COLORES------------*/
@@ -162,6 +163,35 @@
   text-align: center;
   font-weight: 100;
   padding: 2rem 0rem 3rem;
+}
+
+.contenedor-articulos, .main .contenedor-inferior .contenedor-articulos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  height: auto;
+}
+
+.contenedor-articulos__title, .main .contenedor-inferior .contenedor-articulos__title {
+  font-family: "BebasMeue";
+  letter-spacing: 1px;
+  font-size: 3rem;
+  font-weight: 300;
+  background: url(../../img/pxgray.png);
+  background-color: #dedede;
+  -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.83);
+          box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.83);
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem;
 }
 
 .articulo, .main .contenedor-inferior .contenedor-articulos .articulo {
@@ -339,6 +369,73 @@
             transform: scale(1.25);
   }
 }
+.contenedor-inputs__login, .main .contenedor-inferior .asside-bar .form-login .contenedor-inputs__login {
+  border: 2px solid #bfced8;
+  border-radius: 5px;
+  -webkit-box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
+  background-color: #ffffff;
+  margin: 1rem 0rem 2rem;
+  padding: 1rem 0.5rem 4rem;
+}
+.contenedor-inputs__login__input {
+  width: 90%;
+}
+.contenedor-inputs__login__contenedor-botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.contenedor-inputs__login__boton {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#37bcf9), to(#00538c));
+  background-image: linear-gradient(to bottom, #37bcf9, #00538c);
+  padding: 0.75rem 2rem;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.contenedor-colaboradores, .main .contenedor-inferior .asside-bar .colaboradores__contenedor {
+  border-radius: 5px;
+  -webkit-box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
+  background-color: #ffffff;
+  padding: 10rem 5rem;
+  border: 2px solid #bfced8;
+  margin: 1rem 1.5rem;
+}
+
+.menu-footer, .footer__contenedor .menu-footer {
+  margin-left: 1rem;
+}
+.menu-footer__item {
+  border-bottom: 1px solid gray;
+  padding: 2rem 0 1rem;
+  color: aliceblue;
+  width: 80%;
+  text-align: left;
+}
+.menu-footer__link {
+  color: rgb(26, 96, 156);
+  font-size: 1.25rem;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.menu-footer__link:hover {
+  color: white;
+  padding-left: 1rem;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.ubicacion__maps {
+  width: 100%;
+  height: 20rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
 /*--------------ESTILOS UNIVERSALES------------*/
 /*------------ESTILOS DEL BODY------------*/
 .body {
@@ -536,34 +633,7 @@
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.main .contenedor-inferior .contenedor-articulos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 70%;
-  height: auto;
-}
-.main .contenedor-inferior .contenedor-articulos__title {
-  font-family: "BebasMeue";
-  letter-spacing: 1px;
-  font-size: 3rem;
-  font-weight: 300;
-  background: url(../../img/pxgray.png);
-  background-color: #dedede;
-  -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.83);
-          box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.83);
-  width: 100%;
-  text-align: center;
-  padding: 0.75rem;
-}
-.main .contenedor-inferior .asside-bar, .main .contenedor-inferior .asside-bar {
+.main .contenedor-inferior .asside-bar {
   width: 25%;
 }
 .main .contenedor-inferior .asside-bar .contenedor-inputs {
@@ -579,42 +649,6 @@
 .main .contenedor-inferior .asside-bar .login {
   margin-bottom: 1rem;
 }
-.main .contenedor-inferior .asside-bar .form-login .contenedor-inputs__login {
-  border: 2px solid #bfced8;
-  border-radius: 5px;
-  -webkit-box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
-          box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
-  background-color: #ffffff;
-  margin: 1rem 0rem 2rem;
-  padding: 1rem 0.5rem 4rem;
-}
-.main .contenedor-inferior .asside-bar .form-login__input {
-  width: 90%;
-}
-.main .contenedor-inferior .asside-bar .form-login__contenedor-botones {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.main .contenedor-inferior .asside-bar .form-login__boton {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#37bcf9), to(#00538c));
-  background-image: linear-gradient(to bottom, #37bcf9, #00538c);
-  padding: 0.75rem 2rem;
-  color: #ffffff;
-  font-size: 1.25rem;
-}
-.main .contenedor-inferior .asside-bar .colaboradores__contenedor {
-  border-radius: 5px;
-  -webkit-box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
-          box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
-  background-color: #ffffff;
-  padding: 10rem 5rem;
-  border: 2px solid #bfced8;
-  margin: 1rem 1.5rem;
-}
-
 /*------------ESTILOS DEL FOOTER----------*/
 .footer {
   width: 100%;
@@ -647,25 +681,6 @@
 }
 .footer__contenedor--ancho {
   width: 30%;
-}
-.footer__contenedor .menu-footer {
-  margin-left: 1rem;
-}
-.footer__contenedor .menu-footer__item {
-  border-bottom: 1px solid gray;
-  padding: 2rem 0 1rem;
-  color: aliceblue;
-  width: 80%;
-}
-.footer__contenedor .menu-footer__link {
-  color: aliceblue;
-  font-size: 1.25rem;
-}
-.footer__contenedor .ubicacion__maps {
-  width: 100%;
-  height: 20rem;
-  margin-top: 1rem;
-  border-radius: 10px;
 }
 .footer__contenedor .footer-contenedor-derecho {
   display: -webkit-box;
