@@ -1,0 +1,54 @@
+.redes-sociales{
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & h2{
+            width: 100%;
+        }
+        &__iconos{
+            display: flex;
+            flex-direction: column;                
+            width: 70%;
+            height: 17rem;
+            font-size: 2rem;
+            border: 2px solid #bfced8;
+            border-radius: 5px;
+            box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
+            background-color: map-get($bg-colors, bg-color-cards);
+            margin: 1rem 2rem 1rem;
+            
+        }
+        &__icono{
+            cursor: pointer; 
+            padding-right: 1rem;
+            z-index: 1;
+            
+            }
+        
+        &__nombre{
+            font-size: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            left: -12rem;  
+            color: rgba(255, 255, 255, 0);          
+
+        }
+        &__items{
+            width: 2.5rem;
+            margin: .5rem;
+            display: flex;
+            justify-content: space-between;             
+            overflow: hidden;                     
+            &:hover{
+                width: 90%;                        
+                .redes-sociales__nombre{
+                    transform: translateX(8.5rem);
+                    color: black;
+                    transition: transform 1s, color 3s;
+                }
+            }
+        }         
+    }  
+    

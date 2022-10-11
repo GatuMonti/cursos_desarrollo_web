@@ -12,6 +12,7 @@
 @import "elementos/Main/cards/cards"; //Cards
 @import "elementos/articulos"; //Articulos
 @import "elementos/formularios"; //Formularios
+@import "elementos/redes-sociales-animaciones";
 
 
 
@@ -167,32 +168,8 @@
                     font-size: 1.25rem;
                 }
             }
-            .redes-sociales{//---Redes Sociales
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                & h2{
-                    width: 100%;
-                }
-                &__iconos{
-                    display: flex;
-                    flex-direction: column;                
-                    width: 70%;
-                    height: 17rem;
-                    font-size: 2rem;
-                    border: 2px solid #bfced8;
-                    border-radius: 5px;
-                    box-shadow: 9px 7px 13px -6px rgba(0, 0, 0, 0.75);
-                    background-color: map-get($bg-colors, bg-color-cards);
-                    margin: 1rem 2rem 1rem;
-                }
-                
-                &__items{
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                }
+            .redes-sociales{
+                @extend .redes-sociales;
             }
             
             .colaboradores{//---Contenedor de los Colaboradores
