@@ -31,7 +31,16 @@
                 </ul>
             </nav>
                 <!------Menu Mobile-->
-                <i class="menu-mobile fa-solid fa-bars"></i>
+            <nav class="nav-menu-mobile">  
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn"><i class="nav-menu-mobile__icon fa-solid fa-bars"></i></label>
+                <ul class="menu-mobile">
+                    <li class="menu-mobile__item"><a class="menu-principal__link" href="#">INICIO</a></li>
+                    <li class="menu-mobile__item"><a class="menu-principal__link" href="#">BLOG</a></li>
+                    <li class="menu-mobile__item"><a class="menu-principal__link" href="#">FORMACION</a></li>
+                    <li class="menu-mobile__item"><a class="menu-principal__link" href="#">CONTACTO</a></li>
+                </ul>
+            </nav>  
         </div>
     </header>
     <!--SECCION PRINCIPAL MAIN-->
@@ -171,7 +180,7 @@
                         <h2 class="form-search__title">BUSCAR</h2>
                         <div class="contenedor-inputs">
                             <input class="form-search__input" type="search" placeholder="Buscar...">
-                            <button class="form-search__button" type="button">
+                            <button class="form-search__button" type="submit">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </div>
