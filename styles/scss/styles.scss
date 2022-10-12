@@ -8,7 +8,7 @@
 @import "elementos/Header/logo/logo"; //Logo del Header
 @import "elementos/Header/logo/logo-animaciones"; //Animaciones del Logo
 @import "elementos/Header/menu_header/menu-principal"; //Menu Principal del header
-@import "elementos/Main/banner"; //Banner
+@import "elementos/banner"; //Banner
 @import "elementos/Main/cards/cards"; //Cards
 @import "elementos/Main/articulos/articulos"; //Articulos
 @import "elementos/Main/barra-lateral/formularios"; //Formularios
@@ -17,7 +17,7 @@
 @import "elementos/general/animaciones"; //Animaciones
 @import "elementos/Main/barra-lateral/login"; //Login
 @import "elementos/Main/barra-lateral/colaboradores"; //Colaboradores
-@import "elementos/footer/menu-footer";//Menu footer
+@import "elementos/footer/menu-footer"; //Menu footer
 @import "elementos/footer/ubicacion-footer"; //Mapa de la ubicacion
 
 
@@ -33,7 +33,8 @@
 
 .body {
     @include body(font-principal);
-    h2{
+
+    h2 {
         @include titulos(bg-color-titulos);
     }
 }
@@ -61,6 +62,9 @@
         //----Menu Principal del Header
         @include menu-principal(font-secundaria, font-color-principal);
     }
+    .menu-mobile{
+        display: none;
+    }
 }
 
 
@@ -70,7 +74,7 @@
     @extend .main; //----Contenedor Principal
 
     .contenedor-principal {
-        width: 75rem;
+        max-width: 75rem;
         margin: 0 auto;
         @include flex-center ($columna);
     }
@@ -83,9 +87,11 @@
     .contenedor-cards {
         //---Contenedor de todas las cards
         @include flex ($fila, $space-between);
-        width: 75rem;
+        max-width: 75rem;
+        width: 100%;
         height: auto;
         padding: 4.375rem .5rem 7.8125rem;
+
         .card {
             //-----Cards Individuales
             @extend .card;
@@ -96,36 +102,40 @@
         //----Contenedor de Articulos y Barra lateral
         @include flex ($fila, $space-between);
         align-items: flex-start;
-        
+
         .contenedor-articulos {
             //--Contenedor de Articulos
             @extend .contenedor-articulos;
+
             &__title {
                 //---Titulo del Contenedor de articulos
                 @extend .contenedor-articulos__title;
             }
+
             .articulo {
                 //----Articulos Individuales
                 @extend .articulo;
             }
-            .articulo-blog{
+
+            .articulo-blog {
                 @extend .articulo-blog;
             }
         }
 
         .asside-bar {
             //---Contenedor de barra Lateral
-            width: 25%;            
-            
+            width: 25%;
+
             .contenedor-inputs {
                 //---Contenedor de los Inputs
                 padding: 2rem 0rem 3rem;
             }
 
             .form-search {
+
                 //---Formulario Buscar
                 &__input {
-                    width: 89%;
+                    width: 80%;
                     @extend .input;
                 }
 
@@ -136,87 +146,119 @@
                 }
             }
 
-            .login{//----LOGIN Estilos de los Inputs
+            .login {
+                //----LOGIN Estilos de los Inputs
                 @extend .input;
                 margin-bottom: 1rem;
             }
 
-            .form-login {//---LOGIN
-                .contenedor-inputs__login{
+            .form-login {
+
+                //---LOGIN
+                .contenedor-inputs__login {
                     @extend .contenedor-inputs__login;
                 }
+
+                &__input {
+                    width: 90%;
+                }
+
+                &__contenedor-botones {
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+                &__boton {
+                    background-image: linear-gradient(to bottom, #37bcf9, #00538c);
+                    padding: .75rem 2rem;
+                    color: map-get($fonts-colors, font-color-principal);
+                    font-size: 1.25rem;
+                }
             }
-            .redes-sociales{
+
+            .redes-sociales {
                 @extend .redes-sociales;
             }
-            
-            .colaboradores{//---Contenedor de los Colaboradores
-                &__contenedor{
+
+            .colaboradores {
+
+                //---Contenedor de los Colaboradores
+                &__contenedor {
                     @extend .contenedor-colaboradores;
                 }
             }
         }
-    }    
+    }
 }
 
 
 /*------------ESTILOS DEL FOOTER----------*/
-.footer{
+.footer {
     @include footer(bg-color-secundario);
 
-    & h2{//---Estilos de los titulos del Footer
+    & h2 {
+        //---Estilos de los titulos del Footer
         border-radius: .5rem;
     }
 
-    &__contenedor{ //---Contenedor General del Footer
+    &__contenedor {
+        //---Contenedor General del Footer
         @include flex ($fila, $space-between);
         align-items: flex-start;
         margin: 0 auto;
         padding: 2rem;
-        width: 75rem; 
-        
-        &--ancho{
+        max-width: 75rem;
+        width: 100%;
+
+        &--ancho {
             width: 30%;
         }
-        
-        .menu-footer{//-----Menu del Footer
+
+        .menu-footer {
+            //-----Menu del Footer
             @extend .menu-footer;
         }
 
 
-        .ubicacion{//------Seccion de Ubicacion
+        .ubicacion {
+            //------Seccion de Ubicacion
             @extend .ubicacion;
         }
 
-        .footer-contenedor-derecho{
+        .footer-contenedor-derecho {
             @include flex-center ($columna);
-            
-            .footer-contenedor-html5{
+
+            .footer-contenedor-html5 {
                 @include flex-center ($columna);
                 width: 100%;
-                &__title{
+
+                &__title {
                     width: 100%;
-                }                
-                &__img{
+                }
+
+                &__img {
                     padding: 1rem;
                 }
             }
 
-            .footer-contenedor-sistemas{
+            .footer-contenedor-sistemas {
                 @include flex-center ($fila);
                 flex-wrap: wrap;
-                &__title{
+
+                &__title {
                     width: 100%;
                 }
-                &__img{
+
+                &__img {
                     width: 3rem;
                     margin: 2rem .25rem;
                 }
             }
 
-            .footer-autor{
+            .footer-autor {
                 width: 100%;
-                &__descripcion{
+
+                &__descripcion {
                     color: white;
                     padding: 1rem;
                 }
@@ -225,7 +267,131 @@
     }
 }
 
+@media (max-width:1100px) {
+    .main {
+        .contenedor-cards {
+            //---Contenedor de todas las cards
+            @include flex ($columna, $center);
+            flex-wrap: nowrap;
+            max-width: 100%;
+            height: 25rem;
+            padding: 0;
+        }
 
+        .card {
+            //-----Cards Individuales
+            @include card-vertical;
+        }
 
+        .contenedor-principal {
+            width: 100%;
 
+            .contenedor-inferior {
+                @include flex ($columna, $center);
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
 
+                .contenedor-articulos {
+                    //--Contenedor de Articulos
+                    width: 100%;
+                }
+
+                .asside-bar {
+                    order: -1;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .contenedor-inputs {
+                        @include contenedor-inputs;
+                    }
+
+                    .form-search {
+                        width: 100%;
+                        order: 1;
+
+                        &__title {
+                            display: none;
+                        }
+                    }
+
+                    .form-login {
+                        .contenedor-inputs__login {
+                            @include contenedor-inputs-mibile__login;
+                        }
+
+                        &__title {
+                            display: none;
+                        }
+
+                        &__boton {
+                            margin: 0 .25rem;
+                        }
+                    }
+
+                    .redes-sociales {
+                        display: none;
+                    }
+
+                    .colaboradores {
+                        //---Contenedor de los Colaboradores
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:850px){
+    .header{
+        .menu-principal {
+            display: none;
+        }
+        .menu-mobile{
+            display: unset;
+            font-size: 2rem;
+            padding: .5rem 2rem;
+        }
+    }
+    .footer__contenedor{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &--ancho{
+            width: 100%;
+        }        
+
+        .menu-footer{
+            @include menu-footer-mobile;
+        }
+        .footer-contenedor-sistemas {
+            width: 100%;          
+            
+        }
+    }
+}
+
+@media (max-width:725px){
+    .main{
+        .banner{
+            @include banner-mobile;
+        }
+        .contenedor-articulos{
+            @include contenedor-articulos-mobile;
+        }
+        .articulo{
+            @include articulo-mobile;
+            
+        }
+    }
+}
+
+@media (max-width: 400px){
+    :root{
+        font-size: 12px;
+    }
+}

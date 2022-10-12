@@ -10,7 +10,8 @@
     &__title{
         text-align: center;
         background-image: url(../../img/bakbaner.png);
-        background-size: 132%;
+        background-attachment:fixed;
+        background-size: cover;
         background-position: 0rem -10rem;
         height: 6.25rem;
         color: map-get($fonts-colors, font-color-principal);
@@ -19,5 +20,14 @@
         font-size: 2.75rem;
         text-shadow: 2px 2px 1px rgba(0,0,0,0.74);
         line-height: 7rem;
+    }
+}
+
+@mixin banner-mobile{
+    &__title{
+        height: 7rem;
+        line-height: 3rem;
+        padding-top: 1rem;
+        
     }
 }

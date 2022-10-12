@@ -1,5 +1,5 @@
 .menu-footer{
-    margin-left:1rem;
+    margin-left: 1rem;
             &__item{
                 border-bottom: 1px solid gray;
                 padding: 2rem 0 1rem;
@@ -18,4 +18,25 @@
                     transition: all .25s;
                 }             
             }
+}
+
+
+@mixin menu-footer-mobile{
+    &__item{
+        
+        padding: .5rem 0;
+        color: aliceblue;
+        width: 80%;
+        text-align: left;
+    &__link{
+        color: rgb(26, 96, 156);
+        font-size: 1.25rem;  
+        transition: all .25s;
+        &:hover{
+            color: white;
+            padding-left:1rem ;
+            transition: all .25s;
+            }             
+        }
+    }
 }
