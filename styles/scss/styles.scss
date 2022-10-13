@@ -356,12 +356,14 @@
         }
         
         .nav-menu-mobile {
+            overflow: hidden;
             display: unset;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
             margin-top: 19rem;
+            height: 30rem;
             
             &__icon {
                 font-size: 2.5rem;                
@@ -382,19 +384,22 @@
             padding: 1rem;
             width: 50vw;
             height: 19.25rem;
-            border-radius: 0 0 1rem 1rem;
-            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-            transition: all s;
+            border-radius: 0 0 0 1rem;
+            
+            transition: all .5s;
+            position:relative;
+            left: 100%;
             & a{
                 font-size: 1.5rem;
                 line-height: 4rem;
             }
         }
-        #check:checked ~ .menu-mobile{            
-            transform: translateX(50%rem);
+        #check:checked ~ .menu-mobile{ 
+            box-shadow: -13px 11px 8px -1px rgba(0,0,0,0.67);
+            transform: translateX(-90%);
             transition: all .5s;
             }
-        #check:checked ~.checkbtn{
+            #check:checked ~ .checkbtn{
                 color: #00538c;
                 transition: all .5s;
             }
