@@ -404,28 +404,29 @@
                 transition: all .5s;
             }
         }
+        .footer__contenedor {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+            &--ancho {
+                width: 100%;
+            }
+        
+            .menu-footer {
+                @include menu-footer-mobile;
+            }
+        
+            .footer-contenedor-sistemas {
+                width: 100%;
+        
+            }
+        }
     }
 
 
 
-.footer__contenedor {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    &--ancho {
-        width: 100%;
-    }
-
-    .menu-footer {
-        @include menu-footer-mobile;
-    }
-
-    .footer-contenedor-sistemas {
-        width: 100%;
-
-    }
-}
 
 
 @media (max-width:725px) {

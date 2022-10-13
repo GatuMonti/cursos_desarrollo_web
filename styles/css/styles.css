@@ -983,44 +983,44 @@
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
-}
-.footer__contenedor {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.footer__contenedor--ancho {
-  width: 100%;
-}
-.footer__contenedor .menu-footer__item {
-  padding: 0.5rem 0;
-  color: aliceblue;
-  width: 80%;
-  text-align: left;
-}
-.footer__contenedor .menu-footer__item__link {
-  color: rgb(26, 96, 156);
-  font-size: 1.25rem;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-}
-.footer__contenedor .menu-footer__item__link:hover {
-  color: white;
-  padding-left: 1rem;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-}
-.footer__contenedor .footer-contenedor-sistemas {
-  width: 100%;
-}
 
+  .footer__contenedor {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__contenedor--ancho {
+    width: 100%;
+  }
+  .footer__contenedor .menu-footer__item {
+    padding: 0.5rem 0;
+    color: aliceblue;
+    width: 80%;
+    text-align: left;
+  }
+  .footer__contenedor .menu-footer__item__link {
+    color: rgb(26, 96, 156);
+    font-size: 1.25rem;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+  }
+  .footer__contenedor .menu-footer__item__link:hover {
+    color: white;
+    padding-left: 1rem;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+  }
+  .footer__contenedor .footer-contenedor-sistemas {
+    width: 100%;
+  }
+}
 @media (max-width: 725px) {
   .main .banner__title {
     height: 7rem;
